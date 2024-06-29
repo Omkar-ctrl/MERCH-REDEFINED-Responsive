@@ -1,0 +1,197 @@
+@font-face {
+    font-family: 'Suisse Int\'l';
+    src: url('fonts/SuisseIntl-Regular.woff2') format('woff2'),
+         url('fonts/SuisseIntl-Regular.woff') format('woff'),
+         url('fonts/SuisseIntl-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Hamra';
+    src: url(Assets/Font/Zuume\ ExtraBold.ttf);
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: 'Suisse Int\'l', sans-serif;
+}
+
+
+nav{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vh 8vw;
+    padding-top: 10vh;
+    cursor: pointer;
+    position: fixed;
+    z-index: 9;
+    background-color: black;
+
+}
+
+.nav_partCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    position: relative;
+    
+}
+
+.nav_partCenter h1{
+    font-size: 1.5vw;
+    transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94)1.2s;
+}
+
+.nav_partCenter h1:hover{
+    color: #A9F03A;
+}
+
+.nav_partRight button{
+    padding: 2.7vh 2.3vw;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.4vw;
+    font-weight: 650;
+    background-color: #EFECE6;
+    transition: all cubic-bezier(0.455, 0.03, 0.515, 0.955)1.2s;
+    position: relative;
+
+}
+
+
+.nav_partRight button:hover {
+    background: radial-gradient(circle, #A9F03A 100%);
+  }
+
+nav i{
+    font-size: 10vw;
+    color: white;
+    display: none;
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left_section{
+    height: 100%;
+    width: 60%;
+    background-color: rgb(0, 0, 0);
+    flex-direction: column;
+    padding: 15vh 1vw;
+}
+
+.left_section h1{
+    padding: 0vh 5vw;
+    margin-top: 15vh;
+    font-size: 12vw;
+    text-transform: uppercase;
+    line-height: 22vh;
+    font-family: Hamra;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1)1s;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image: url("https://media2.giphy.com/media/HkEDr0jVekaZO/giphy.gif?cid=790b76115151ed408a9cae4539eb6351baba5d85998ab783&ct=g&rid=giphy.gif");
+}
+
+.left_section h4{
+    margin-top: 2vh;
+    padding: 0vh 5vw;
+    font-size: 1.5vw;
+    line-height: 5.5vh;
+    color: rgb(157, 157, 157);
+}
+
+
+.right_section{
+    height: 100%;
+    width: 60%;
+  
+}
+
+.right_section video{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    
+}
+
+@media (max-width:500px) {
+
+
+    .nav_partCenter, .nav_partRight{
+        display: none;
+    }
+
+    nav i{
+        display: block;
+    }
+
+    #main{
+        min-height: 100vh;
+    }
+    #page1{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .left_section{
+        height: 40%;
+        
+
+    }
+    .left_section h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2vh 0vw;
+        margin: 1vh -20vw;
+        font-size: 25vw;
+        margin-top: 1vh;
+        line-height: 9vh;
+    }
+
+    .nav_partLeft img{
+        font-size: 25vw;
+    }
+    
+    .left_section h4 {
+        margin-top: 2vh;
+        font-size: 3.5vw;
+        margin-left: -10vw;
+        line-height: 2.5vh;
+        margin-bottom: 1vh;
+        width: 93vw;
+        color: rgb(157, 157, 157);
+    }
+
+    .right_section {
+        margin-top: 3vh;
+    }
+    .right_section video {
+        height: 100%;
+        width: 100%;
+        scale: 1.5;
+        
+    }
+
+
+}
